@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title> </title>
+
+    <!-- NORMALIZE
+  <link rel="stylesheet" href="layout/normalize.css"> -->
+
+    <!--CSS-->
+    <link rel="stylesheet" href="layout/main.css" />
+
+    <!--PRINT-->
+    <link rel="stylesheet" href="" media="print" />
+
+    <!--FAVICON-->
+    <link rel="icon" href="" />
+    <link rel="icon" href="" type="image/svg+xml" />
+
+    <meta name="author" content="Luis Guaiquirian" />
+    <meta
+      name="description"
+      content="Luis Guaiquirian is an apprentice web programmer, specializing in front-end developer, student, based in Santiago de Chile, Chile, apprentice, web programmer, Venezuelan web developer, Chilean, front-end web programmer"
+    />
+    <meta
+      name="keywords"
+      content="Luis, Guaiquirian, Santiago web programmer, front-end developer"
+    />
+
+    <!--
+    Luis Guaiquirian CHILE.
+    V:3.0
+
+    Launched: XX-XX-2021
+  -->
+
+    <!--PAGES-->
+
+    <!--GOOGLE FONTS = ROBOTO-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--GOOGLE FONTS = MONSERRAT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--GOOGLE FONTS = PT SERIF-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>CSS functions.</h1>
+      <p class="definition">
+        A CSS function it's a named, self-contained piece of code that complete
+        a specific task.
+      </p>
+      <div class="functionContainer">
+        <h2>- url ()</h2>
+        <p>
+          It's use to include a file, the parameter is an absolute URL, a
+          realtive URL, or a data URi. The <code>url ()</code> function can be
+          passed as a parameter of another CSS function.
+        </p>
+        <div class="urlFunctionExample"></div>
+        <code>background-image: url(images/canada.jpg);</code>
+      </div>
+      <hr />
+      <div class="functionContainer">
+        <h2>- attr ()</h2>
+        <p>
+          It's use to retrieve the value of an attribute of the selected element
+          and use it in the stylesheet. It can also be used on pseudo-elements,
+          in which case the value of the attribute on the pseudo-element's
+          originating element is returned.
+        </p>
+        <p>Let's use it to show the Link inside a anchor</p>
+        <a href="www.google.com">Hi! I have a link inside</a>
+        <code> content: " [ " attr(href) " ] ";</code>
+      </div>
+      <hr />
+      <div class="functionContainer">
+        <h2>- calc ()</h2>
+        <p>This is a special function for doing basic Math.</p>
+        <p>
+          For example: <br />
+          If we want to use for any reason the 100% of available space - X
+          value.
+        </p>
+        <div class="calcFunction">
+          <div class="calFunction2"></div>
+        </div>
+        <code> width: calc(100% - 20px);</code> <br />
+        <code>height: calc(100% - 50px);</code>
+      </div>
+      <hr />
+      <div class="functionContainer">
+        <h2>- lang ()</h2>
+        <p>
+          Including a lang attribute in your HTML is a really important thing to
+          do. When present in your HTML, you are able to use
+          <code>lang ()</code> and apply styles based on it.
+        </p>
+        <p lang="Fr">
+          <q>Petit a petit, l'oiseau fait son nid</q>
+        </p>
+        <p lang="Ko">
+          <q>멈추지 말고 계속 해나가기만 한다면 늦어도 상관없다.</q>
+        </p>
+        <code
+          >p:lang(fr){<br />
+          color: rgb(5, 105, 67); }</code
+        >
+      </div>
+      <hr />
+      <div class="functionContainer">
+        <h2>- blur ()</h2>
+        <p>
+          <p>Applies a Gaussian blur to the input images. It's result is a filter function.</p>
+          <img class="blurFunction" src="layout/images/canada.jpg" alt="">
+          <code>filter: blur(5px);</code>
+        </p>
+      </div>
+      <hr />
+      <div class="functionContainer">
+        <h2>- opacity ()</h2>
+          <p>Sets the opacity level for the element (transparency level).</p>
+          <img class="opacityFunction" src="layout/images/canada.jpg" alt="">
+          <code>filter: opacity(10%);</code>
+      </div>
+      <hr />
+      <div class="functionContainer">
+        <h2>- brightness ()</h2>
+          <p>Adjust the brightness of the image.</p>
+          <img class="brightnessFunction" src="layout/images/canada.jpg" alt="">
+          <code>filter: brightness(140%);</code>
+      </div>
+      <hr />
+      <div class="functionContainer">
+        <h2>- var ()</h2>
+          <p>This CSS function can be used to insert the value of a custom property.<br>
+          The first argument to the function is the name of the custom property to be 
+          substituted. An optional second argument to the function serves as a fallback value.</p>
+          <p class="varExample">This text is styled with a var declaration</p>
+          <code>:root {<br>
+            --colorExample: rgb(183, 0, 255);
+          }</code>
+          <br>
+          <code>color: var(--colorExample);</code>
+      </div>
+      <hr />
+      <div class="functionContainer">
+        <h2>- RGB () & RGBA ()</h2>
+          <p>This function notation expresses a color a ccording to its red, green, 
+            and blue components. Also an optional Alpha component represents the color's transparency.</p>
+            <div class="boxRgbContainer">
+              <div class="box1 boxRgb">RGB</div>
+              <div class="box2 boxRgb">RGBA transparency</div>
+            </div>
+          <code>background-color: rgb(234, 123, 232);</code> <br>
+          <code>background-color: rgba(145 152 84 / 0.3);</code>
+      </div>
+      <hr />
+      <div class="functionContainer">
+        <h2>- hex</h2>
+          <p>It's based on the same principles of RGB but wrote it in a Hexadecimal notation.</p>
+          <div class="hexaExample"></div>
+          <code>background-color: #324312;</code>
+      </div>
+      <hr />
+      <div class="functionContainer">
+        <h2>- nth-child () & :nth-last-child ()</h2>
+          <p>Matches elements based on their position in a group of siblings.</p>
+          <p>Using  <code>:nth-child</code>  I will select the <span class="fourth">fourth</span> element on this list.</p>
+          <ul class="nth">
+            <li>Item1</li>
+            <li>Item2</li>
+            <li>Item3</li>
+            <li>Item4</li>
+            <li>Item5</li>
+            <li>Item6</li>
+            <li>Item7</li>
+            <li>Item8</li>
+            <li>Item9</li>
+          </ul>
+          <p>Now, using<code>:nth-last-child</code>I will select the element 8 starting from the bottom</p>
+          <code>ul li:nth-child(4)</code><br>
+          <code>ul li:nth-last-child(2)</code>
+      </div>
+      <hr />
+      <div class="functionContainer">
+        <h2>- :not ()</h2>
+          <p>Represents elements that do not match a list of selectors. Since it prevents specific items from being selected.</p>
+          <ul>
+            <li>Item1</li>
+            <li>Item2</li>
+            <li class="different">Item3</li>
+            <li>Item4</li>
+            <li>Item5</li>
+          </ul>
+          <code>li:not(.different)</code>
+      </div>
+      <hr />
+    </div>
+  </body>
+</html>
